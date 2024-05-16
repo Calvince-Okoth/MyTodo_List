@@ -20,27 +20,31 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvTodolist"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/etTodoTitle"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintVertical_bias="0.476"
+        tools:layout_editor_absoluteX="0dp" />
 
     <EditText
         android:id="@+id/etTodoTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:hint="Enter todo name"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="670dp" />
+        app:layout_constraintEnd_toStartOf="@+id/btTodolistadd"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="667dp" />
 
     <Button
         android:id="@+id/btTodolistadd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
         android:text="Add List"
-        tools:layout_editor_absoluteX="179dp"
-        tools:layout_editor_absoluteY="670dp" />
+        app:layout_constraintEnd_toStartOf="@+id/btTodolistdelete"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="667dp" />
 
     <Button
         android:id="@+id/btTodolistdelete"
@@ -48,7 +52,8 @@
         android:layout_height="wrap_content"
         android:text="Delete List"
         tools:layout_editor_absoluteX="296dp"
-        tools:layout_editor_absoluteY="670dp" />
+        tools:layout_editor_absoluteY="667dp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
